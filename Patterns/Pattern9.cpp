@@ -21,30 +21,34 @@ int main(){
     cin>>n;
     n >>= 1;
     for(int i=0;i<n;i++){
+        
         for(int j=0;j<n;j++){
-            if(j <= (n-1)-i)
+            if(j < (n-1)-i)
                 cout<<" ";
             else 
                 cout<<"*";
         }
-    
-        for(int j=0;j<=i;j++){
-            cout<<"*";
+        
+        for(int j=1;j<n;j++){
+            if(j<=i)
+                cout<<"*";    
+            else 
+                cout<<" ";
         }
         cout<<endl;
     }
-    
+        
     for(int i=0;i<n;i++){
-        cout<<" ";
+        
         for(int j=0;j<n;j++){
-            if(i>j)
+            if(j<i)
                 cout<<" ";
-            else 
+            else
                 cout<<"*";
         }
-    
-        for(int j=0;j<(n-1)-i;j++){
-            cout<<"*";
+        
+        for(int j=1;j<n-i;j++){
+            cout<<"*";    
         }
         cout<<endl;
     }
